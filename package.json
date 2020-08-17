@@ -1,0 +1,30 @@
+{
+  "name": "mean-srm",
+  "version": "1.0.0",
+  "description": "fullstack MEAN app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "server": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wincchesster/mean_srm.git"
+  },
+  "keywords": [
+    "express",
+    "angular"
+  ],
+  "author": "Alexandr Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wincchesster/mean_srm/issues"
+  },
+  "homepage": "https://github.com/wincchesster/mean_srm#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
