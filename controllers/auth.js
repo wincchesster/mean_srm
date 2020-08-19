@@ -1,3 +1,8 @@
+const User = require('../models/User');
+
+
+
+
 module.exports.login = function(req, res) {
     res.status(200).json({
         login: {
@@ -8,8 +13,18 @@ module.exports.login = function(req, res) {
 }
 
 
-module.exports.register = function(req, res) {
-    res.status(200).json({
-         register: 'from controller'
-    })
-}
+module.exports.register = async function(req, res) {
+    const candidate = await User.findOne({email: req.body.email})
+
+    if (candidate) {
+        // this email allready use --> error
+        res.status(409).json({
+            messege: 'This email allready use.'
+        })
+    } else {
+        // ok -> user created
+    }
+
+ }
+
+ 
