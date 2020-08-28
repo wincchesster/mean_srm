@@ -3,8 +3,8 @@ const controller = require('../controllers/order')
 const router = express.Router()
 
 
-router.post('/', controller.getAll)
-router.get('/', controller.create)
+router.post('/',passport.authenticate('jwt', {session: false}), controller.getAll)
+router.get('/',passport.authenticate('jwt', {session: false}), controller.create)
 
 
 module.exports = router
