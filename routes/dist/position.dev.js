@@ -4,6 +4,8 @@ var express = require('express');
 
 var controller = require('../controllers/position');
 
+var passport = require('passport');
+
 var router = express.Router();
 router.get('/:categoryId', passport.authenticate('jwt', {
   session: false
